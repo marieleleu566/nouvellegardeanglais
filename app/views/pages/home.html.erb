@@ -5,11 +5,17 @@
   </div>
   <div class="table-contents">
     <a href="#accueil">Greeting</a>
+    <p>–</p>
     <a href="#smalltalk">Once Seated</a>
+    <p>–</p>
     <a href="#menu">Menu</a>
+    <p>–</p>
     <a href="#drinks">Drinks</a>
+    <p>–</p>
     <a href="#smalltalk">Small Talk</a>
+    <p>–</p>
     <a href="#onceserved">Once Served</a>
+    <p>–</p>
     <a href="#payment">Payment</a>
   </div>
   <div class="content">
@@ -98,14 +104,28 @@
   </div>
 </div>
 
-<script>
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
 
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
-    });
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+
+// document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+//     anchor.addEventListener('click', function (e) {
+//         e.preventDefault();
+
+//         document.querySelector(this.getAttribute('href')).scrollIntoView({
+//             behavior: 'smooth'
+//         });
+//     });
+// });
+
+//Smooth scrolling with links
+$('a[href*=\\#]').on('click', function(event){
+    event.preventDefault();
+    $('html,body').animate({scrollTop:$(this.hash).offset().top}, 500);
+});
+
+// Smooth scrolling when the document is loaded and ready
+$(document).ready(function(){
+  $('html,body').animate({scrollTop:$(location.hash).offset().top}, 500);
 });
 </script>
