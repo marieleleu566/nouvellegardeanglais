@@ -1,4 +1,6 @@
+<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
 <%= image_tag 'dubillot.jpg', class:'banner' %>
+<a href="javascript:" id="top"><i class="fas fa-chevron-up"></i></a>
 <div class="container">
   <div class="header">
     <%= image_tag 'NG_LOGO_typo02.png', class:'logo' %>
@@ -107,16 +109,19 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script>
-
-// document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-//     anchor.addEventListener('click', function (e) {
-//         e.preventDefault();
-
-//         document.querySelector(this.getAttribute('href')).scrollIntoView({
-//             behavior: 'smooth'
-//         });
-//     });
-// });
+// ===== Scroll to Top ====
+$(window).scroll(function() {
+    if ($(this).scrollTop() >= 50) {    // If page is scrolled more than 50px
+        $('#top').fadeIn("fast");       // Fade in the arrow
+    } else {
+        $('#top').fadeOut("fast");      // Else fade out the arrow
+    }
+});
+$('#top').click(function() {            // When arrow is clicked
+    $('body,html').animate({
+        scrollTop : 0                   // Scroll to top of body
+    }, 500);
+});
 
 //Smooth scrolling with links
 $('a[href*=\\#]').on('click', function(event){
@@ -128,4 +133,6 @@ $('a[href*=\\#]').on('click', function(event){
 $(document).ready(function(){
   $('html,body').animate({scrollTop:$(location.hash).offset().top}, 500);
 });
+
+
 </script>
