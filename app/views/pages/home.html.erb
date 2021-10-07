@@ -1,2 +1,111 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<%= image_tag 'dubillot.jpg', class:'banner' %>
+<div class="container">
+  <div class="header">
+    <%= image_tag 'NG_LOGO_typo02.png', class:'logo' %>
+  </div>
+  <div class="table-contents">
+    <a href="#accueil">Greeting</a>
+    <a href="#smalltalk">Once Seated</a>
+    <a href="#menu">Menu</a>
+    <a href="#drinks">Drinks</a>
+    <a href="#smalltalk">Small Talk</a>
+    <a href="#onceserved">Once Served</a>
+    <a href="#payment">Payment</a>
+  </div>
+  <div class="content">
+    <div class="content-header">
+      <h3 id='acceuil'>Greeting</h1>
+      <p>Before the guest has been seated, from the moment they arrive to the restaurant.</p>
+    </div>
+    <div class="translation">
+      <h4>Hello/Hi, how are you today?</h4>
+      <p>Bonjour, comment ça va?</p>
+    </div>
+    <div class="translation">
+      <h4>A table for ____ people? Right this way.</h4>
+      <p> Une table pour ____ personnes? Suivez-moi.  </p>
+    </div>
+    <div class="translation">
+      <h4>Sorry, we don’t have any room left outside. But, we do have some tables inside if you want.</h4>
+      <p>Désolée, on à plus de place en terrasse, mais on peut vous installer à l'intérieur si ça vous intéresse.</p>
+    </div>
+    <div class="translation">
+      <h4>Do you have a reservation? (If yes… For how many people? Under what name?)</h4>
+      <p>Vous avez réservé? Pour combien de personnes? A quelle nom?</p>
+    </div>
+    <div class="translation">
+      <h4>Sorry, we have a little bit of a wait time. If you’d like, you can grab a drink at the bar until a table is ready.</h4>
+      <p>Désolé il y a un peu d'attente. Si vous voulez je peux vous installer au bar pour prendre un verre en attendant.</p>
+    </div>
+    <div class="translation">
+      <h4>Sorry, we have a little bit of wait time as you can see. What’s your name? I'll add it to the list and call it once we have a table ready. </h4>
+      <p>Désolée, on a un peu d'attente, comme vous pouvez imaginer. Je vous mets sur la liste d'attente et je vous appelle dès que j’ai une table qui se libère. </p>
+    </div>
+    <div class="translation">
+      <h4>Hello, unfortunately our restaurant is full.</h4>
+      <p> Bonjour, désolée mais j’ai plus de place.</p>
+    </div>
+    <div class="translation">
+      <h4>Sorry, but I can't seat you until the rest of your friends/family/table arrive(s).</h4>
+      <p>Désolé, mais je ne peux pas vous installer tant que votre table n'est pas au complèt. </p>
+    </div>
+    <div class="translation">
+      <h4>Sorry but that table is reserved.</h4>
+      <p>Désolé cette table est réservée</p>
+    </div>
+  </div>
+  <div class="content">
+    <div class="content-header">
+      <h3 id='smalltalk'>Once Seated</h1>
+      <p>Once the client has been seated at their table.</p>
+    </div>
+    <div class="translation">
+      <h4>Hi, how are you tonight/today? Can I offer you some sparkling or still water while you look at the menu? It's on the house.</h4>
+      <p>Salut, comment vas-tu ce soir/aujourd'hui ? Puis-je vous offrir de l'eau gazeuse ou plate pendant que vous regardez le menu ? C'est offert.</p>
+    </div>
+    <div class="translation">
+      <h4>Don't hesitate if you have any questions about the menu.</h4>
+      <p>N'hésitez pas si vous avez des questions sur le menu.</p>
+    </div>
+    <div class="translation">
+      <h4>Would you guys want to start out with some appetizers?</h4>
+      <p>Vous voulez commencer avec quelques entrées?</p>
+    </div>
+    <div class="translation">
+      <h4>Everything is organic, locally produced, and housemade.</h4>
+      <p>Tout est bio, local et fait maison.</p>
+    </div>
+    <div class="translation">
+      <h4>Our special tonight, which is not on the menu is:</h4>
+      <p>Notre spécial ce soir, qui n'est pas sur la carte est :</p>
+    </div>
+    <div class="translation">
+      <h4>If you aren't super hungry, I recommend taking several small plates. They are perfect for sharing.</h4>
+      <p>Si vous n'avez pas très faim, je vous recommande de prendre plusieurs petites assiettes. Ils se partage.</p>
+    </div>
+    <div class="translation">
+      <h4>I'll give you guys a couple minutes to look over the card, don't hesitate to call me over whenever you are ready.</h4>
+      <p>Je vous donne quelques minutes pour regarder la carte, n'hésitez pas à me faire signe dès que vous êtes prêt.</p>
+    </div>
+    <div class="translation">
+      <h4></h4>
+      <p></p>
+    </div>
+    <div class="translation">
+      <h4></h4>
+      <p></p>
+    </div>
+  </div>
+</div>
+
+<script>
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+</script>

@@ -1,1 +1,59 @@
 // Specific CSS for your home-page
+.logo {
+  width: 300px;
+  // max-height: 300px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.content {
+  h3 {
+    font-family: 'Nouvelle Garde';
+    color: #E9C15D;
+
+  }
+  h4 {
+    font-family: 'Nickson';
+    color: #c61c1c;
+  }
+  p {
+    font-family: 'Aleo';
+  }
+  scroll-behavior: smooth !important;
+}
+
+.table-contents {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-bottom: 50px;
+  a {
+    font-family: 'Nouvelle Garde';
+    font-size: 25px;
+    color: #E9C15D;
+    padding: 10px;
+  }
+  scroll-behavior: smooth !important;
+}
+
+.translation {
+margin: 40px;
+}
+
+.content-header {
+  margin-bottom: 20px;
+  margin-top: 20px;
+  scroll-behavior: smooth !important;
+
+}
