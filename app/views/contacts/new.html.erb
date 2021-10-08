@@ -1,0 +1,42 @@
+<div class="container">
+  <div class="wrapper">
+    <img src="https://res.cloudinary.com/marie-leleu/image/upload/v1607783220/IMG_2888_okgdib.jpg" class="contact-img">
+    <div class="contact-form">
+    <%= form_for @contact do |f| %>
+      <% if flash[:error].present? %>
+        <p> flash[:error]</p>
+      <% end %>
+      <h1>contact me</h1>
+      <div class="form-name">
+        <%= f.label :name, 'Your Name:'%> <br>
+        <%= f.text_field :name, required: true %>
+      </div>
+      <div class="form-email">
+        <%= f.label :email, 'Your Email:' %> <br>
+        <%= f.text_field :email, required: true %>
+      </div>
+      <div class="form-text">
+        <%= f.label :message, 'Your Message:' %> <br>
+        <%= f.text_area :message, as: :text %>
+      </div>
+      <div class="send-button">
+        <%= f.submit 'SEND', class: "send-btn" %>
+      </div>
+    <% end %>
+      <div class="vl">
+      </div>
+    </div>
+
+    <div class="contact-info">
+      <div class="contact-paragraph">
+        <p>Feel free to send me a message if you have any questions, if you want to work together, or if you simply want to say hello and chat. Either way, I'd love to hear from you. </p>
+      </div>
+      <div class="icons">
+        <a href="mailto:marieleleu@icloud.com"><i class="fas fa-phone fa-1x"></i></i></a>
+        <a href="tel:+33680848864"><i class="fas fa-envelope fa-1x"></i></a>
+        <a href="https://github.com/marieleleu566"><i class="fab fa-github fa-1x"></i></a>
+        <a href="https://www.linkedin.com/in/marieleleu/"><i class="fab fa-linkedin-in fa-1x"></i></a>
+      </div>
+    </div>
+  </div>
+</div>
