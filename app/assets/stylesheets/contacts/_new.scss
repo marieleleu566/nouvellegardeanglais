@@ -1,0 +1,41 @@
+.contact-form {
+  h2 {
+    font-family: 'Nouvelle Garde';
+    color: #E9C15D;
+    margin-bottom: 20px;
+  }
+
+
+  label, p {
+    font-family: 'Aleo';
+  }
+}
+
+.suggest-btn-send {
+  padding: 10px;
+  display: flex;
+  background-color: #c61c1c;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  box-shadow:0 2px 14px rgba(126, 87, 88, .3), 0 3px 6px rgba(0, 0, 0, .4);
+  border: none;
+  p {
+    margin-bottom: 0px;
+    color: white;
+    font-family: 'Nouvelle Garde';
+  }
+  p:hover {
+    text-decoration: none;
+  }
+  &:hover {
+    opacity: .7;
+  }
+}
+
+.send-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}

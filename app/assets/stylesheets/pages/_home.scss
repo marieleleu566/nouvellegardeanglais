@@ -16,6 +16,37 @@
   object-fit: cover;
 }
 
+.ideas {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: 'Aleo';
+  margin-bottom: 50px;
+}
+
+.suggest-btn {
+  padding: 10px;
+  display: flex;
+  background-color: #c61c1c;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  box-shadow:0 2px 14px rgba(126, 87, 88, .3), 0 3px 6px rgba(0, 0, 0, .4);
+
+  a {
+    margin-bottom: 0px;
+    color: white;
+    font-family: 'Nouvelle Garde';
+  }
+  a:hover {
+    text-decoration: none;
+  }
+  &:hover {
+    opacity: .7;
+  }
+}
+
 .content {
   h3 {
     font-family: 'Nouvelle Garde';
@@ -38,7 +69,7 @@
   align-items: baseline;
   flex-wrap: wrap;
   width: 100%;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   a {
     font-family: 'Nouvelle Garde';
     font-size: 25px;

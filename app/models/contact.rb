@@ -1,6 +1,7 @@
 class Contact < MailForm::Base
   attribute :name, validate: true
   attribute :email, validate: true
+  attributes :type
   attribute :message
   def headers
     {

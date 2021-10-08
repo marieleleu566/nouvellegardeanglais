@@ -1,42 +1,40 @@
+<%= image_tag 'dubillot.jpg', class:'banner' %>
+<a href="javascript:" id="top"><i class="fas fa-chevron-up"></i></a>
 <div class="container">
-  <div class="wrapper">
-    <img src="https://res.cloudinary.com/marie-leleu/image/upload/v1607783220/IMG_2888_okgdib.jpg" class="contact-img">
+  <div class="header">
+    <%= link_to '/' do %>
+      <%= image_tag 'NG_LOGO_typo02.png', class:'logo' %>
+    <% end %>
+  </div>
     <div class="contact-form">
-    <%= form_for @contact do |f| %>
+    <h2>Soumettre une phrase à traduire</h2>
+    <p>Ne vous inquiétez pas si vous ne voyez pas la traduction tout de suite. Je ne suis pas un magicien, je ne peux pas traduire les choses automatiquement. Le site sera mis à jour chaque semaine, alors en attendant, apprenez les autres phrases de la page.</p>
+    <%= simple_form_for @contact do |f| %>
       <% if flash[:error].present? %>
-        <p> flash[:error]</p>
+        <p> Please correctly complete the fields below</p>
       <% end %>
-      <h1>contact me</h1>
-      <div class="form-name">
-        <%= f.label :name, 'Your Name:'%> <br>
-        <%= f.text_field :name, required: true %>
+      <div class="form-row">
+        <div class="col">
+          <%= f.input :name, label:"Nom", error: 'Name is mandatory, please specify one', required: true, class:"form-control"%> <br>
+        </div>
+        <div class="col">
+          <%= f.input :email, label:'Email', required: true, class:"form-control"%> <br>
+        </div>
       </div>
-      <div class="form-email">
-        <%= f.label :email, 'Your Email:' %> <br>
-        <%= f.text_field :email, required: true %>
+      <div class="form-row">
+        <div class="col">
+          <%= f.input :type, collection:["Greeting", "Once Seated", "Drinks", "Menu", "Once Served","Small Talk", "Payment"], label:'Sous quelle catégorie?', error: 'Please select an option from the list', required: true%> <br>
+        </div>
       </div>
       <div class="form-text">
-        <%= f.label :message, 'Your Message:' %> <br>
-        <%= f.text_area :message, as: :text %>
+        <%= f.label 'Saisissez la/les phrases que vous souhaitez traduire', required: true %>
+        <%= f.text_area(:message, rows: 3, class:"form-control")%> <br>
       </div>
       <div class="send-button">
-        <%= f.submit 'SEND', class: "send-btn" %>
+      <%= button_tag(type: 'submit', class: "suggest-btn-send") do %>
+        <p>Soumettre Phrase</p>
+      <% end %>
       </div>
     <% end %>
-      <div class="vl">
-      </div>
-    </div>
-
-    <div class="contact-info">
-      <div class="contact-paragraph">
-        <p>Feel free to send me a message if you have any questions, if you want to work together, or if you simply want to say hello and chat. Either way, I'd love to hear from you. </p>
-      </div>
-      <div class="icons">
-        <a href="mailto:marieleleu@icloud.com"><i class="fas fa-phone fa-1x"></i></i></a>
-        <a href="tel:+33680848864"><i class="fas fa-envelope fa-1x"></i></a>
-        <a href="https://github.com/marieleleu566"><i class="fab fa-github fa-1x"></i></a>
-        <a href="https://www.linkedin.com/in/marieleleu/"><i class="fab fa-linkedin-in fa-1x"></i></a>
-      </div>
-    </div>
   </div>
 </div>
